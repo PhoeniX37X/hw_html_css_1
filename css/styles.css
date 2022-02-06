@@ -1,12 +1,43 @@
+/* 
+Включено в модерн нормалайз
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+} */
+
 :root {
   --accent-color: #2196f3;
 }
+
+/* Standarts for projects */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+/* li {
+  display: block;
+} */
 .list {
   list-style: none;
 }
 .link {
   text-decoration: none;
 }
+
 h2 {
   font-family: Roboto, sans-serif;
   font-weight: 700;
@@ -93,7 +124,8 @@ address {
   color: #ffffff;
 }
 .modal-btn {
-  margin-top: 30px;
+  display: block;
+  align-items: center;
   width: 200px;
   height: 50px;
   font-weight: 700;
@@ -104,6 +136,7 @@ address {
   color: #ffffff;
   background-color: var(--accent-color);
   border-radius: 4px;
+  margin: 30px auto;
 }
 .modal-btn:hover,
 .modal-btn:focus {
@@ -227,9 +260,15 @@ address {
   cursor: pointer;
 }
 .projects-list {
+  display: flex;
+  flex-wrap: wrap;
 }
 .projects-item {
+  border: 1px solid #eeeeee;
 }
+/* .projects-item:not(:nth-last-child(-n+3)) {
+  margin-bottom: 20px;
+}  кроме 3 последних элем*/
 .project-title {
   font-weight: 700;
   font-size: 18px;
