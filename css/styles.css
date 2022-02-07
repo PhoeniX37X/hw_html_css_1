@@ -8,6 +8,7 @@
 
 :root {
   --accent-color: #2196f3;
+  --card-set-gap: 30px;
 }
 
 /* Standarts for projects */
@@ -340,12 +341,12 @@ address {
 .projects-list {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
+  margin-left: calc(-1 * var(--card-set-gap));
+  margin-top: calc(-1 * var(--card-set-gap));
 }
 .projects-item {
-  margin-left: 30px;
-  margin-top: 30px;
+  margin-left: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
   flex-basis: calc((100% - 90px) / 3);
 }
 .projects-item:hover,
