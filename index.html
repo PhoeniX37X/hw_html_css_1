@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 
@@ -21,7 +22,8 @@
   <header class="header">
     <div class="container header-container">
       <nav class="navigation">
-        <a class="main-logo header-logo link" href="./"><span class="logo-set">Web</span>Studio</a>
+        <a class="main-logo header-logo link animate__heartBeat animate__infinite infinite" href="./"><span
+            class="logo-set">Web</span>Studio</a>
         <ul class='menu list'>
           <li class="menu-item"><a class="menu-link link current-link" href="./">Студия</a></li>
           <li class="menu-item"><a class="menu-link link" href="/portfolio.html">Портфолио</a></li>
@@ -42,20 +44,7 @@
         Эффективные решения<br>
         для вашего бизнеса
       </h1>
-      <button data-modal-open class="modal-btn" type="button">Заказать услугу</button>
-      <div class="backdrop is-hidden" data-modal>
-        <div class="modal">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nam doloribus atque dolorem tenetur,
-            perspiciatis in, unde ullam corrupti itaque ipsa non doloremque et nisi dolores sunt officia reprehenderit.
-            Necessitatibus soluta dolorem omnis tenetur voluptatem distinctio quis. Molestiae ex ducimus nobis facere
-            natus totam cupiditate perferendis, eius impedit, voluptatibus corporis.
-          </p>
-          <button data-modal-close type="button">
-            close
-          </button>
-        </div>
-      </div>
+      <button class="modal-btn" type="button" data-modal-open>Заказать услугу</button>
     </section>
     <section class="advantages">
       <div class="container">
@@ -396,6 +385,15 @@
       </div>
     </div>
   </footer>
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal-box">
+      <button class="modal-box__close-button" type="button" data-modal-close>
+        <svg class="modal-box__close-icon" width="11px" height="11px">
+          <use href="./images/social-icons/sprite.svg#icon-close"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
   <script src="./js/modal.js"></script>
 </body>
 

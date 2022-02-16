@@ -38,6 +38,9 @@ img {
   max-width: 100%;
   height: auto;
 }
+button {
+  padding: 0px;
+}
 /* li {
   display: block;
 } */
@@ -85,6 +88,11 @@ address {
 
 .header {
   border-bottom: 1px solid #ececec;
+  /* position: absolute; */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* background-color: rgba(0, 223, 204, 0.384); */
 }
 .header-container {
   display: flex;
@@ -102,6 +110,10 @@ address {
   letter-spacing: 0.03em;
   color: #212121;
 }
+.main-logo:hover {
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+}
 .header-logo {
   margin-right: 93px;
 }
@@ -118,7 +130,7 @@ address {
   margin-right: 51px;
 }
 .menu-item {
-  position: relative;
+  /* position: relative; */
 }
 .menu-link {
   font-weight: 500;
@@ -212,6 +224,50 @@ address {
   background-color: #188ce8;
   cursor: pointer;
   transition: box-shadow var(--hover-animation), background-color var(--hover-animation);
+}
+
+/* MODAL BOX */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity var(--hover-animation), visibility var(--hover-animation);
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.modal-box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+.modal-text {
+}
+.modal-box__close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0px;
+}
+.modal-box__close-icon {
 }
 
 /* ADVANTAGES LIST */
