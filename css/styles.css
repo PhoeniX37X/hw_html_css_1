@@ -11,6 +11,8 @@
   --card-set-gap: 30px;
   --card-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  --hover-animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --color-animation: color var(--hover-animation);
 }
 
 /* Standarts for projects */
@@ -115,6 +117,9 @@ address {
 .menu-item:not(:last-child) {
   margin-right: 51px;
 }
+.menu-item {
+  position: relative;
+}
 .menu-link {
   font-weight: 500;
   font-size: 14px;
@@ -125,13 +130,14 @@ address {
 .menu-link:hover,
 .menu-link:focus {
   color: var(--accent-color);
+  transition: var(--color-animation);
 }
 .current-link {
   color: var(--accent-color);
 }
 .current-link::after {
   content: '';
-  /* position: absolute; */
+  transform: translateY(1px);
   left: 0;
   display: block;
   margin-top: 28px;
@@ -139,7 +145,6 @@ address {
   height: 4px;
   border-radius: 2px;
   background-color: var(--accent-color);
-  cursor: default;
 }
 
 .contacts-list {
@@ -161,6 +166,7 @@ address {
 .contacts-link:hover,
 .contacts-link:focus {
   color: var(--accent-color);
+  transition: var(--color-animation);
 }
 
 /* HERO */
@@ -205,6 +211,7 @@ address {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   background-color: #188ce8;
   cursor: pointer;
+  transition: box-shadow var(--hover-animation), background-color var(--hover-animation);
 }
 
 /* ADVANTAGES LIST */
@@ -267,12 +274,12 @@ address {
   text-transform: uppercase;
   display: flex;
   justify-content: center;
+  align-items: center;
   color: #ffffff;
   background-color: rgba(47, 48, 58, 0.8);
   width: 100%;
   height: 70px;
   bottom: 0px;
-  padding-top: 27px;
 }
 
 /* TEAM-SECTION */
@@ -345,6 +352,7 @@ address {
 .social-list__item-link:focus {
   background-color: var(--accent-color);
   fill: #ffffff;
+  transition: background-color var(--hover-animation), fill var(--hover-animation);
 }
 
 /* -------CLIENTS -----------*/
@@ -377,6 +385,7 @@ address {
 .clients-list__item:focus {
   fill: var(--accent-color);
   outline: 1px solid var(--accent-color);
+  transition: fill var(--hover-animation), outline var(--hover-animation);
 }
 
 .clients-list__item-link {
@@ -389,6 +398,7 @@ address {
 .clients-list__item-link:hover .clients-list__logo,
 .clients-list__item-link:focus .clients-list__logo {
   fill: var(--accent-color);
+  transition: fill var(--hover-animation);
 }
 .clients-list__logo {
   fill: #afb1b8;
@@ -486,6 +496,7 @@ address {
 .filters-btn:hover,
 .filters-btn:focus {
   background-color: var(--accent-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: #ffffff;
   cursor: pointer;
 }
@@ -502,11 +513,37 @@ address {
 }
 .projects-item:hover,
 .projects-item:focus {
-  cursor: pointer;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: box-shadow var(--hover-animation);
 }
-.card-tumb {
+
+.card-list__img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(33, 150, 243, 0.9);
+  color: #ffffff;
+  padding: 63px 24px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  transform: translateY(100%);
+  transition: transform var(--hover-animation);
+
+  font-family: Roboto;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+}
+.card-list__link:hover .overlay,
+.card-list__link:focus .overlay {
+  transform: translateY(0%);
 }
 .project-item-caption {
   border-bottom: 1px solid #eeeeee;
