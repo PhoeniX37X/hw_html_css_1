@@ -178,13 +178,20 @@ address {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: #757575;
-  display: block;
+  display: flex;
+  /* justify-content: start; */
+  align-items: center;
+  fill: #757575;
 }
 .contacts-link:hover,
 .contacts-link:focus {
+  fill: var(--accent-color);
   color: var(--accent-color);
   transform: scale(1.2);
   transition: var(--color-animation), transform var(--hover-animation);
+}
+.contact-icon {
+  margin-right: 10px;
 }
 
 /* HERO */
@@ -235,7 +242,7 @@ address {
     transform var(--hover-animation);
 }
 
-/* MODAL BOX */
+/* MODAL FORM */
 
 .backdrop {
   position: fixed;
@@ -251,13 +258,14 @@ address {
   visibility: hidden;
   pointer-events: none;
 }
-.modal-box {
+.contact-form {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   width: 528px;
   height: 581px;
+  padding: 40px;
   background-color: #ffffff;
   border-radius: 4px;
 }
@@ -276,9 +284,60 @@ address {
   cursor: pointer;
   padding: 0px;
 }
+.modal-box__close-button:hover .modal-box__close-icon,
+.modal-box__close-button:focus .modal-box__close-icon {
+  fill: var(--accent-color);
+  background-color: rgb(255, 255, 255);
+  transform: scale(1.2);
+  transition: var(--scale-animation);
+}
 .modal-box__close-icon {
 }
+.contact-form__title {
+}
+.contact-form__input {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 11px 12px;
+  margin-bottom: 10px;
+  /* remove browser outline in focus */
+  outline: none;
+}
 
+/* :placeholder-shown применяется свойство ф-ции при фокусе,когда плейсхолдер не показан если поле валидно и наоборот */
+.contact-form__input:focus:not(:placeholder-shown):valid {
+  border-color: #08e652;
+}
+.contact-form__input:focus:not(placeholder-shown):invalid {
+  border-color: #e60808;
+}
+
+.contact-form__input:hover,
+.contact-form__input:focus {
+  border-color: var(--accent-color);
+  cursor: pointer;
+}
+.contact-form__input-icon {
+  position: absolute;
+}
+.contact-form__comments-title {
+}
+.contact-form__comment-box {
+  width: 448px;
+  height: 120px;
+  padding: 12px 16px;
+}
+.agreement {
+  margin-right: 7px;
+}
+.agreement-term__text {
+}
+.agreement-term__link {
+}
 /* ADVANTAGES LIST */
 
 .advantages {
@@ -543,6 +602,7 @@ address {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
+  margin-bottom: 16px;
 }
 .footer__social-list {
   width: 206px;
@@ -550,6 +610,29 @@ address {
 .footer-social-list__item-link {
   background-color: rgba(255, 255, 255, 0.1);
   fill: #ffffff;
+}
+.footer-submit__list {
+  display: flex;
+}
+.footer-submit__list-item {
+}
+.footer-submit__input-mail {
+  width: 358px;
+  padding: 15px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  outline: none;
+  background-color: transparent;
+}
+.footer-submit__button {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  margin-left: 12px;
+}
+.footer-submit__button-icon {
+  margin-left: 10px;
 }
 
 /* PORTFOLIO */

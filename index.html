@@ -26,14 +26,27 @@
             class="logo-set">Web</span>Studio</a>
         <ul class='menu list'>
           <li class="menu-item"><a class="menu-link link current-link" href="./">Студия</a></li>
-          <li class="menu-item"><a class="menu-link link" href="/portfolio.html">Портфолио</a></li>
+          <li class="menu-item">
+            <a class="menu-link link" href="/portfolio.html">Портфолио</a>
+          </li>
           <li class="menu-item"><a class="menu-link link" href="">Контакты</a></li>
         </ul>
       </nav>
       <ul class="contacts-list list">
-        <li class="contacts-item"><a class="contacts-link link" href="mailto:"
-            mykhailo.yevtushok@gmail.com">mykhailo.yevtushok@gmailcom</a></li>
-        <li class="contacts-item"><a class="contacts-link link" href="tel:+380971380963">+38 097 138 09 63</a></li>
+        <li class="contacts-item">
+          <a class="contacts-link link" href="mailto:" mykhailo.yevtushok@gmail.com">
+            <svg class="contact-icon" width='16px' height="12px">
+              <use href="/images/social-icons/sprite.svg#icon-mail"></use>
+            </svg>
+
+            mykhailo.yevtushok@gmailcom</a>
+        </li>
+        <li class="contacts-item"><a class="contacts-link link" href="tel:+380971380963">
+            <svg class="contact-icon" width='10px' height="16px">
+              <use href="/images/social-icons/sprite.svg#icon-smartphone"></use>
+            </svg>
+
+            +38 097 138 09 63</a></li>
       </ul>
     </div>
   </header>
@@ -347,7 +360,7 @@
           </address>
         </div>
         <div class="footer__social-list">
-          <h3 class="footer-social-list__title">присоединяйтесь</h3>
+          <h3 class="footer-title footer-social-list__title">присоединяйтесь</h3>
           <ul class="social-list footer-social-list list">
             <li class="social-list__item">
               <a href="#" class="social-list__item-link footer-social-list__item-link social-list__item-link-insta">
@@ -380,22 +393,62 @@
           </ul>
         </div>
         <div class="footer-submit">
-          <h3 class="footer-submit__title">подпишитесь на рассылку</h3>
-          <button type="submit">ПОДПИСАТЬСЯ</button>
+          <h3 class="footer-title footer-submit__title">подпишитесь на рассылку</h3>
+          <ul class="footer-submit__list list">
+            <li class="footer-list-item">
+              <input type="email" class="footer-submit__input-mail" name="user-mail" placeholder="E-mail" required>
+            </li>
+            <li class="footer-submit__list-item">
+              <button type="submit" class="footer-submit__button modal-btn">ПОДПИСАТЬСЯ
+                <svg class="footer-submit__button-icon" width="24px" height="24px">
+                  <use href="/images/social-icons/sprite.svg#icon-send"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </footer>
+
+  <!-- MODAL FORM -->
   <div class="backdrop is-hidden" data-modal>
-    <div class="modal-box">
+    <form class="contact-form" method="post">
       <button class="modal-box__close-button" type="button" data-modal-close>
         <svg class="modal-box__close-icon" width="11px" height="11px">
           <use href="./images/social-icons/sprite.svg#icon-close"></use>
         </svg>
       </button>
-    </div>
+      <p class="contact-form__title">Оставьте свои данные, мы вам перезвоним</p>
+      <p class="contact-form__input-title">Имя</p>
+      <input type="text" class="contact-form__input" name="user-name" required minlength="2">
+      <svg class="contact-form__input-icon" width="18px" height="18px">
+        <use href="./images/social-icons/sprite.svg#icon-name"></use>
+      </svg>
+      <p class="contact-form__input-title">Телефон</p>
+      <input type="tel" class="contact-form__input" name="user-phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+        title="000-000-00-00" required>
+      <svg class="contact-form__input-icon" width="18px" height="18px">
+        <use href="./images/social-icons/sprite.svg#icon-phone"></use>
+      </svg>
+      <p class="contact-form__input-title">Почта</p>
+      <input type="email" class="contact-form__input" name="user-mail" required>
+      <svg class="contact-form__input-icon" width="18px" height="18px">
+        <use href="./images/social-icons/sprite.svg#icon-mail-2"></use>
+      </svg>
+      <p class="contact-form__input-title">Комментарий</p>
+      <input type="text" class="contact-form__input contact-form__comment-box" placeholder="Введите текст"
+        name="user-comment">
+      <label>
+        <input class="agreement" type="checkbox" name="" required>Соглашаюсь с рассылкой и принимаю
+      </label>
+      <a href="#" class="agreement-terms__link">Условия договора</a>
+      <button type="submit" class="modal-btn contact-form__btn">Отправить</button>
+      </а>
   </div>
+  <!-- -------------- -->
   <script src="./js/modal.js"></script>
+
 </body>
 
 </html>
