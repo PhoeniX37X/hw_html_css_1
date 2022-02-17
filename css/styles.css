@@ -490,6 +490,13 @@ address {
 .footer-logo {
   color: #ffffff;
 }
+.footer-logo:focus,
+.footer-logo:hover {
+  display: inline-block;
+  transform: rotateX(360deg) scale(1.2);
+  transition: transform 2s, scale 2s;
+  perspective: 30px;
+}
 .footer-address {
   margin-top: 20px;
 }
@@ -508,7 +515,7 @@ address {
 .footer-address-way:hover,
 .footer-address-way:focus {
   color: var(--accent-color);
-  display: block;
+  display: inline-block;
   transform: translate(20%);
   transition: var(--scale-animation);
 }
