@@ -13,6 +13,7 @@
     1px 4px 6px rgba(0, 0, 0, 0.16);
   --hover-animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --color-animation: color var(--hover-animation);
+  --scale-animation: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Standarts for projects */
@@ -133,6 +134,7 @@ address {
   /* position: relative; */
 }
 .menu-link {
+  display: block;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -141,8 +143,10 @@ address {
 }
 .menu-link:hover,
 .menu-link:focus {
+  overflow: hidden;
   color: var(--accent-color);
-  transition: var(--color-animation);
+  transform: scale(1.2);
+  transition: var(--color-animation), transition var(--hover-animation);
 }
 .current-link {
   color: var(--accent-color);
@@ -174,11 +178,13 @@ address {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: #757575;
+  display: block;
 }
 .contacts-link:hover,
 .contacts-link:focus {
   color: var(--accent-color);
-  transition: var(--color-animation);
+  transform: scale(1.2);
+  transition: var(--color-animation), transform var(--hover-animation);
 }
 
 /* HERO */
@@ -223,7 +229,10 @@ address {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   background-color: #188ce8;
   cursor: pointer;
-  transition: box-shadow var(--hover-animation), background-color var(--hover-animation);
+  display: block;
+  transform: scale(1.2);
+  transition: box-shadow var(--hover-animation), background-color var(--hover-animation),
+    transform var(--hover-animation);
 }
 
 /* MODAL BOX */
@@ -408,7 +417,9 @@ address {
 .social-list__item-link:focus {
   background-color: var(--accent-color);
   fill: #ffffff;
-  transition: background-color var(--hover-animation), fill var(--hover-animation);
+  transform: scale(1.1);
+  transition: transform var(--hover-animation), background-color var(--hover-animation),
+    fill var(--hover-animation);
 }
 
 /* -------CLIENTS -----------*/
@@ -441,7 +452,8 @@ address {
 .clients-list__item:focus {
   fill: var(--accent-color);
   outline: 1px solid var(--accent-color);
-  transition: fill var(--hover-animation), outline var(--hover-animation);
+  transform: scale(1.2);
+  transition: var(--scale-animation), fill var(--hover-animation), outline var(--hover-animation);
 }
 
 .clients-list__item-link {
@@ -486,12 +498,19 @@ address {
 .footer-address-item:not(:last-child) {
   margin-bottom: 9px;
 }
-.footer-address-link {
+.footer-address-way {
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #ffffff;
+}
+.footer-address-way:hover,
+.footer-address-way:focus {
+  color: var(--accent-color);
+  display: block;
+  transform: translate(20%);
+  transition: var(--scale-animation);
 }
 .footer-address-tel,
 .footer-address-mail {
@@ -500,6 +519,12 @@ address {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #ffffff99;
+}
+.footer-address-tel:hover,
+.footer-address-tel:focus,
+.footer-address-mail:hover,
+.footer-address-mail:focus {
+  transform: translate(20%);
 }
 .footer-social-list__title,
 .footer-submit__title {
