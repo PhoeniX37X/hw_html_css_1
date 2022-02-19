@@ -42,9 +42,7 @@ img {
 button {
   padding: 0px;
 }
-/* li {
-  display: block;
-} */
+
 .list {
   list-style: none;
 }
@@ -89,11 +87,9 @@ address {
 
 .header {
   border-bottom: 1px solid #ececec;
-  /* position: absolute; */
   left: 0;
   top: 0;
   width: 100%;
-  /* background-color: rgba(0, 223, 204, 0.384); */
 }
 .header-container {
   display: flex;
@@ -123,16 +119,12 @@ address {
 }
 .menu {
   display: flex;
-  /* align-items: center; */
   padding-top: 34px;
-  /* padding-bottom: 34px; */
 }
 .menu-item:not(:last-child) {
   margin-right: 51px;
 }
-.menu-item {
-  /* position: relative; */
-}
+
 .menu-link {
   display: block;
   font-weight: 500;
@@ -179,7 +171,6 @@ address {
   letter-spacing: 0.02em;
   color: #757575;
   display: flex;
-  /* justify-content: start; */
   align-items: center;
   fill: #757575;
 }
@@ -218,8 +209,6 @@ address {
 }
 .modal-btn {
   display: block;
-  /* min-width: 200px;
-  min-height: 50px; */
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
@@ -305,7 +294,6 @@ address {
   margin-bottom: 12px;
 }
 .modal-form-field {
-  /* position: relative; */
   margin-bottom: 10px;
   font-size: 12px;
   line-height: 14px;
@@ -391,7 +379,6 @@ address {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  /* margin-left: -1.2em; */
 }
 
 .checkbox {
@@ -411,11 +398,6 @@ address {
   border-color: var(--accent-color);
   background-image: url('/images/social-icons/check.svg');
 }
-/* .modal-form__checkbox-check-icon {
-  position: absolute;
-  width: 16px;
-  height: 15px;
-} */
 
 /* ADVANTAGES LIST */
 
