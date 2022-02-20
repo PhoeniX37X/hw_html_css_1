@@ -1,0 +1,32 @@
+
+.filters-list {
+    display: flex;
+    justify-content: center;
+    height: 54px;
+    margin-bottom: 34px;
+  }
+  .filters-item {
+  }
+  .filters-item:not(:last-child) {
+    margin-right: 8px;
+  }
+  .filters-btn {
+    height: 38px;
+    background-color: #f5f4fa;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+    border-radius: 4px;
+    border: none;
+    padding: 6px 22px;
+  }
+  .filters-btn:hover,
+  .filters-btn:focus {
+    background-color: var(--accent-color);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: #ffffff;
+    cursor: pointer;
+  }

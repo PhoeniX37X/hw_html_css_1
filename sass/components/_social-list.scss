@@ -1,0 +1,30 @@
+.social-list {
+    display: flex;
+    align-content: center;
+    margin-top: 16px;
+    justify-content: space-between;
+  }
+  .social-list__item {
+  }
+  .social-list__item-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #ffffff;
+    width: 44px;
+    height: 44px;
+    fill: #afb1b8;
+  }
+  .social-list__icon {
+    width: 20px;
+    height: 20px;
+  }
+  .social-list__item-link:hover,
+  .social-list__item-link:focus {
+    background-color: var(--accent-color);
+    fill: #ffffff;
+    transform: scale(1.1);
+    transition: transform var(--hover-animation), background-color var(--hover-animation),
+      fill var(--hover-animation);
+  }

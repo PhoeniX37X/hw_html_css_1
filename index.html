@@ -14,38 +14,38 @@
     integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/main.min.css">
 </head>
 
 <body>
   <!-- HEADER -->
   <header class="header">
-    <div class="container header-container">
+    <div class="container header__container">
       <nav class="navigation">
-        <a class="main-logo header-logo link animate__heartBeat animate__infinite infinite" href="./"><span
-            class="logo-set">Web</span>Studio</a>
+        <a class="logo header__logo link animate__heartBeat animate__infinite infinite" href="./"><span
+            class="logo__set">Web</span>Studio</a>
         <ul class='menu list'>
-          <li class="menu-item"><a class="menu-link link current-link" href="./">Студия</a></li>
-          <li class="menu-item">
-            <a class="menu-link link" href="/portfolio.html">Портфолио</a>
+          <li class="menu__item"><a class="menu__link menu__current link" href="./">Студия</a></li>
+          <li class="menu__item">
+            <a class="menu__link link" href="/portfolio.html">Портфолио</a>
           </li>
-          <li class="menu-item"><a class="menu-link link" href="">Контакты</a></li>
+          <li class="menu__item">
+            <a class="menu__link link" href="">Контакты</a></li>
         </ul>
       </nav>
-      <ul class="contacts-list list">
-        <li class="contacts-item">
-          <a class="contacts-link link" href="mailto:" mykhailo.yevtushok@gmail.com">
-            <svg class="contact-icon" width='16px' height="12px">
+      <ul class="contacts__list list">
+        <li class="contacts__item">
+          <a class="contacts__link link" href="mailto:" mykhailo.yevtushok@gmail.com">
+            <svg class="contacts__icon" width='16px' height="12px">
               <use href="/images/social-icons/sprite.svg#icon-mail"></use>
             </svg>
 
             mykhailo.yevtushok@gmailcom</a>
         </li>
-        <li class="contacts-item"><a class="contacts-link link" href="tel:+380971380963">
-            <svg class="contact-icon" width='10px' height="16px">
+        <li class="contacts__item"><a class="contacts__link link" href="tel:+380971380963">
+            <svg class="contacts__icon" width='10px' height="16px">
               <use href="/images/social-icons/sprite.svg#icon-smartphone"></use>
             </svg>
-
             +38 097 138 09 63</a></li>
       </ul>
     </div>
@@ -53,54 +53,54 @@
   <main>
     <!-- HERO -->
     <section class="hero">
-      <h1 class="hero-title">
+      <h1 class="hero__title">
         Эффективные решения<br>
         для вашего бизнеса
       </h1>
-      <button class="modal-btn" type="button" data-modal-open>Заказать услугу</button>
+      <button class="modal__btn" type="button" data-modal-open>Заказать услугу</button>
     </section>
     <section class="advantages">
       <div class="container">
         <h2 hidden>Наши приемущества</h2>
-        <ul class="advantages-list list">
-          <li class="advantages-item">
-            <div class="advantages-list__icon-tumb">
-              <svg class="advantages-list__icon" width="70px" height="70px">
+        <ul class="advantages__list list">
+          <li class="advantages__item">
+            <div class="advantages__tumb">
+              <svg class="advantages__icon" width="70px" height="70px">
                 <use href="./images/social-icons/sprite.svg#icon-antenna"></use>
               </svg>
             </div>
-            <p class="advantages-item-title">Внимание к деталям</p>
-            <p class="advantages-item-text">Идейные соображения, а также начало повседневной работы по формированию
+            <p class="advantages__title">Внимание к деталям</p>
+            <p class="advantages__text">Идейные соображения, а также начало повседневной работы по формированию
               позиции.</p>
-          </li>
-          <li class="advantages-item">
-            <div class="advantages-list__icon-tumb">
-              <svg class="advantages-list__icon" width="70px" height="70px">
+                  </li>
+          <li class="advantages__item">
+            <div class="advantages__tumb">
+              <svg class="advantages__icon" width="70px" height="70px">
                 <use href="./images/social-icons/sprite.svg#icon-clock"></use>
               </svg>
             </div>
-            <p class="advantages-item-title">Пунктуальность</p>
-            <p class="advantages-item-text">Задача организации, в особенности же рамки и место обучения кадров влечет за
+            <p class="advantages__title">Пунктуальность</p>
+            <p class="advantages__text">Задача организации, в особенности же рамки и место обучения кадров влечет за
               собой.</p>
           </li>
-          <li class="advantages-item">
-            <div class="advantages-list__icon-tumb">
-              <svg class="advantages-list__icon" width="70px" height="70px">
+          <li class="advantages__item">
+            <div class="advantages__tumb">
+              <svg class="advantages__icon" width="70px" height="70px">
                 <use href="./images/social-icons/sprite.svg#icon-diagram"></use>
               </svg>
             </div>
-            <p class="advantages-item-title">Планирование</p>
-            <p class="advantages-item-text">Равным образом консультация с широким активом в значительной степени
+            <p class="advantages__title">Планирование</p>
+            <p class="advantages__text">Равным образом консультация с широким активом в значительной степени
               обуславливает.</p>
           </li>
-          <li class="advantages-item">
-            <div class="advantages-list__icon-tumb">
-              <svg class="advantages-list__icon" width="70px" height="70px">
+          <li class="advantages__item">
+            <div class="advantages__tumb">
+              <svg class="advantages__icon" width="70px" height="70px">
                 <use href="./images/social-icons/sprite.svg#icon-astronaut"></use>
               </svg>
             </div>
-            <p class="advantages-item-title">Современные технологии</p>
-            <p class="advantages-item-text"> Значимость этих проблем настолько очевидна, что реализация плановых
+            <p class="advantages__title">Современные технологии</p>
+            <p class="advantages__text"> Значимость этих проблем настолько очевидна, что реализация плановых
               заданий.
             </p>
           </li>
@@ -344,26 +344,26 @@
   <!-- ------------FOOTER---------- -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-section">
-        <div class="footer-local">
-          <a class="main-logo footer-logo link" href="./"><span class="logo-set">Web</span>Studio</a>
-          <address class="footer-address">
-            <ul class="footer-address-list list">
-              <li class="footer-address-item"><a class="footer-address-way link"
+      <div class="footer__section">
+        <div class="footer__location">
+          <a class="logo footer__logo link" href="./"><span class="logo__set">Web</span>Studio</a>
+          <address class="address">
+            <ul class="address__list list">
+              <li class="address__item"><a class="address__geo link"
                   href="https://goo.gl/maps/r1NRDLo5HLnGUAa56" target="_blank" rel="noopener noreferrer">г. Киев, пр-т
                   Леси
                   Украинки, 26</a></li>
-              <li class="footer-address-item"><a class="contacts-link footer-address-mail link" href="mailto:"
+              <li class="address__item"><a class="contacts__link address__mail link" href="mailto:"
                   mykhailo.yevtushok@gmail.com">mykhailo.yevtushok@gmailcom</a></li>
-              <li class="footer-address-item"><a class="contacts-link footer-address-tel link"
+              <li class="address__item"><a class="contacts__link address__tel link"
                   href="tel:+380971380963">+38 097 138 09
                   63</a>
               </li>
             </ul>
           </address>
         </div>
-        <div class="footer__social-list">
-          <h3 class="footer-title footer-social-list__title">присоединяйтесь</h3>
+        <div class="footer__social">
+          <h3 class="footer__title">присоединяйтесь</h3>
           <ul class="social-list footer-social-list list">
             <li class="social-list__item">
               <a href="#" class="social-list__item-link footer-social-list__item-link social-list__item-link-insta">
@@ -396,14 +396,14 @@
           </ul>
         </div>
         <form class="footer-submit">
-          <h3 class="footer-title footer-submit__title">подпишитесь на рассылку</h3>
+          <h3 class="footer__title">подпишитесь на рассылку</h3>
           <form action="" class="footer-form">
             <ul class="footer-submit__list list">
               <li class="footer-list-item">
                 <input type="email" class="footer-submit__input-mail" name="user-mail" placeholder="E-mail" required>
               </li>
               <li class="footer-submit__list-item">
-                <button type="submit" class="footer-submit__button modal-btn">ПОДПИСАТЬСЯ
+                <button type="submit" class="footer-submit__button modal__btn">ПОДПИСАТЬСЯ
                   <svg class="footer-submit__button-icon" width="24px" height="24px">
                     <use href="/images/social-icons/sprite.svg#icon-send"></use>
                   </svg>
@@ -465,7 +465,7 @@
           договора</a>
       </label>
 
-      <button type="submit" class="modal-btn contact-form__btn">Отправить</button>
+      <button type="submit" class="modal__btn contact-form__btn">Отправить</button>
     </form>
 
 
