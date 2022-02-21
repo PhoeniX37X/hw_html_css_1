@@ -28,3 +28,12 @@
     transition: transform var(--hover-animation), background-color var(--hover-animation),
       fill var(--hover-animation);
   }
+  
+.footer .social-list__item:not(:last-child){
+  margin-right: 10px;
+    
+  }
+.footer-social-list__item-link {
+    background-color: rgba(255, 255, 255, 0.1);
+    fill: #ffffff;
+}

@@ -15,7 +15,11 @@
     color: #ffffff;
   }
   .address__geo:hover,
-  .address__geo:focus {
+  .address__geo:focus,
+  .address__tel:hover,
+  .address__tel:focus,
+  .address__mail:hover,
+  .address__mail:focus {
     color: var(--accent-color);
     display: inline-block;
     transform: translate(20%);
@@ -28,10 +32,6 @@
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: #ffffff99;
+    
   }
-  .address__tel:hover,
-  .address__tel:focus,
-  .address__mail:hover,
-  .address__mail:focus {
-    transform: translate(20%);
-  }
+   
