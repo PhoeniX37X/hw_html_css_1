@@ -3,8 +3,6 @@
     padding-top: 12px;
     padding-bottom: 94px;
   }
-  .clients-title {
-  }
   
   .clients-list {
     padding-top: 50px;
@@ -16,7 +14,7 @@
   .clients-list__item {
     width: 170px;
     height: 92px;
-    outline: 1px solid #afb1b8;
+    border: 1px solid #afb1b8;
     border-radius: 4px;
     /* padding: 16px 32px; */
   }

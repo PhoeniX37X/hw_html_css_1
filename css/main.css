@@ -222,20 +222,19 @@ address {
   animation-iteration-count: infinite;
 }
 
-.header__logo {
-  margin-right: 93px;
-}
-
 .logo__set {
   color: var(--accent-color);
+}
+
+.header__logo {
+  margin-right: 93px;
 }
 
 .footer__logo {
   color: #ffffff;
 }
 
-.footer__logo:focus,
-.footer__logo:hover {
+.footer__logo:focus, .footer__logo:hover {
   display: inline-block;
   transform: rotateX(360deg) scale(1.2);
   transition: transform 2s, scale 2s;
@@ -398,12 +397,42 @@ address {
 
 .hero {
   background-color: #303030;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/hero-image.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/images/hero-bg/mobile/bg-hero-mobile.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position: center;
   height: 600px;
   min-width: 1200px;
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/images/hero-bg/mobile/bg-hero-mobile@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/images/hero-bg/tablet/bg-hero-tablet.jpg");
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/images/hero-bg/tablet/bg-hero-tablet@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/images/hero-bg/desktop/bg-hero-desktop.jpg");
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/images/hero-bg/desktop/bg-hero-desktop@2x.jpg");
+  }
 }
 
 .hero__title {
@@ -575,7 +604,7 @@ address {
 .clients-list__item {
   width: 170px;
   height: 92px;
-  outline: 1px solid #afb1b8;
+  border: 1px solid #afb1b8;
   border-radius: 4px;
   /* padding: 16px 32px; */
 }
